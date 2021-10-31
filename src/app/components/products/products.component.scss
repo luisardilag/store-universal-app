@@ -1,0 +1,25 @@
+.products {
+    .card__product {
+        max-width: 260px;
+        height: 350px;
+        padding: 16px;
+        border-radius: 16px;
+        border: 1px solid #c9c9c9;
+        img {
+            width: 250px;
+        }
+        h4 {
+            color: #3b3b3b;
+            font-weight: bold;
+        }
+        p {
+            color: #3b3b3b;
+            font-weight: lighter;
+        }
+        &:hover {
+            cursor: pointer;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            transition: ease-in .2s;
+        }
+    }
+}
