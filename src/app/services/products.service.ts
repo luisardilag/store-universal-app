@@ -12,7 +12,7 @@ export class ProductsService {
 
   constructor( private http: HttpClient ) { }
 
-  getProductsUrl() {
-    return this.http.get<Product>(this.productsUrl);
+  getAllProducts() {
+    return this.http.get<Product[]>(this.productsUrl);
   }
 }

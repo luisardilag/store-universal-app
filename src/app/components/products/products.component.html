@@ -1,7 +1,7 @@
 <section class="products">
-    <article class="card__product">
-        <img src="https://home.ripley.cl/store/Attachment/WOP/D113/2000383288789/2000383288789-1.jpg" alt="">
-        <h4>Titulo del producto Titulo del producto Titulo del producto Titulo del producto </h4>
-        <p>$ 100.000.000</p>
+    <article class="card__product" *ngFor="let product of products">
+        <img [src]="product.images" alt="imagen de producto">
+        <h4>{{ product.description }}</h4>
+        <p>{{ product.price | currency }}</p>
     </article>
 </section>
