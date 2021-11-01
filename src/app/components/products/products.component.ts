@@ -10,27 +10,15 @@ import { Product } from '../../models/product';
 })
 export class ProductsComponent implements OnInit {
 
-  products: Product = {
-    id: 0,
-    title: '',
-    price: 0,
-    description: '',
-    category: {
-      id: 0,
-      name: '',
-      type: ''
-    },
-    images: []
-  };
+  products: Product[] = [];
 
   constructor( private productService: ProductsService) { }
 
   ngOnInit(): void {
-    this.productService.getProductsUrl()
+    this.productService.getAllProducts()
       .subscribe( data => {
         
         this.products = data;
-        console.log(this.products);
         
       });
   }
