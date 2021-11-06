@@ -3,41 +3,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .card__product {
-        max-width: 260px;
-        height: 350px;
-        padding: 16px;
-        border-radius: 16px;
-        border: 1px solid #c9c9c9;
-        img {
-            width: 250px;
-        }
-        h4 {
-            color: #3b3b3b;
-            font-weight: bold;
-        }
-        p {
-            color: #3b3b3b;
-            font-weight: lighter;
-        }
-        &:hover {
-            cursor: pointer;
-            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-            transition: ease-in .2s;
-        }
-    }
 }
 
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .products {background: red;}
+    .products {background: white;}
 }
   
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .products {
-        background: green;
+        background: white;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
@@ -47,7 +24,7 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .products {
-        background: blue;
+        background: white;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 16px;
@@ -57,9 +34,26 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     .products {
-        background: orange;
+        background: white;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 16px;
     }
 } 
+
+.product-detail {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all ease-out .5s;
+    transform: translateX(100%);
+    &.active{
+      transform: translateX(0);
+    }
+  }

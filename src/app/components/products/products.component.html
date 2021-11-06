@@ -1,7 +1,27 @@
 <section class="products">
     <article class="card__product" *ngFor="let product of products">
-        <img [src]="product.images" alt="imagen de producto">
+
+        <app-product [product]="product"></app-product>
+
+
+        <!-- <img [src]="product.images" alt="imagen de producto">
         <h4>{{ product.description }}</h4>
         <p>{{ product.price | currency }}</p>
+        <button>Add to car</button>
+        <button>Detalle</button> -->
+
+
+
+
+
     </article>
 </section>
+
+
+<article class="product-detail" [class.active]="showProductDetail">
+    <div>
+        <button (click)="toggleProductDetail()">X</button>
+        contenido
+    </div>
+    <!-- <app-product class="product__detail" [class.active]="showProductDetail"></app-product> -->
+</article>

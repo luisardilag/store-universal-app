@@ -11,16 +11,25 @@ import { Product } from '../../models/product';
 export class ProductsComponent implements OnInit {
 
   products: Product[] = [];
+  showProductDetail = false;
 
-  constructor( private productService: ProductsService) { }
+  constructor( private productsService: ProductsService) { }
 
   ngOnInit(): void {
-    this.productService.getAllProducts()
+    this.productsService.getAllProducts()
       .subscribe( data => {
         
         this.products = data;
         
       });
+  }
+
+  onShowDetail( id: string ) {
+    console.log(id);
+  }
+
+  toggleProductDetail() {
+    this.showProductDetail = !this.showProductDetail;
   }
 
 }
